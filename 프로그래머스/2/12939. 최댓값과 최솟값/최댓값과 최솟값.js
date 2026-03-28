@@ -1,8 +1,9 @@
 function solution(s) {
-    //둘 이상의 정수가 공백으로 구분
-    var answer = '';
+    //"1 2 3 4 -1 -2 -3 -4"
+    //공백으로 나뉘어져있습니다.
+    var answer = s.split(' ')
+    var max = Math.max(...answer)
+    var min = Math.min(...answer)
     
-    //str 길이가 1이면 
-    var numbers = s.split(' ').map((i)=>parseInt(i.trim()))
-    return Math.min(...numbers) + ' ' + Math.max(...numbers);
+    return min + ' ' + max
 }
